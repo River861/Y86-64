@@ -1,0 +1,208 @@
+-----------------------------------------------------------------------------------------------------
+
+
+######## This is the beginning of cjr.yo ##########
+
+
+-----------------------------------------------------------------------------------------------------
+***********************Circle 0**************************
+ZF=1 SF=0 OF=0 Stat=AOK
+F :  predPC=0x0
+D : Decode stage is doing nothing.      State=BUB
+E : Execute stage is doing nothing.      State=BUB
+M: Memory stage is doing nothing.     State=BUB
+W: Write-back stage is doing nothing. State=BUB
+        Execute: ALU:    --------    
+        Memory:     --------    
+        Writeback:     --------    
+*******************************************************
+
+***********************Circle 1**************************
+ZF=1 SF=0 OF=0 Stat=AOK
+F :  predPC=0xa
+D : instr=irmovq  rA=----  rB=%rsp  valC=0x40  valP=0xa  State=AOK
+E : Execute stage is doing nothing.      State=BUB
+M: Memory stage is doing nothing.     State=BUB
+W: Write-back stage is doing nothing. State=BUB
+        Execute: ALU:    --------    
+        Memory:     --------    
+        Writeback:     --------    
+*******************************************************
+
+***********************Circle 2**************************
+ZF=1 SF=0 OF=0 Stat=AOK
+F :  predPC=0x14
+D : instr=irmovq  rA=----  rB=%rax  valC=0x38  valP=0x14  State=AOK
+E : instr=irmovq       valC=0x40   valA=0x0  valB=0x0
+      srcA=----  srcB=----  dstE=%rsp  dstM=----  State=AOK
+M: Memory stage is doing nothing.     State=BUB
+W: Write-back stage is doing nothing. State=BUB
+        Execute: ALU: valE = valC + 0 
+        Memory:     --------    
+        Writeback:     --------    
+*******************************************************
+
+***********************Circle 3**************************
+ZF=1 SF=0 OF=0 Stat=AOK
+F :  predPC=0x14
+D : Decode stage is doing nothing.      State=BUB
+E : instr=irmovq       valC=0x38   valA=0x0  valB=0x0
+      srcA=----  srcB=----  dstE=%rax  dstM=----  State=AOK
+M: instr=irmovq  Cnd=1  valE=0x40  valA=0x0  dstE=%rsp  dstM=----  State=AOK
+W: Write-back stage is doing nothing. State=BUB
+        Execute: ALU: valE = valC + 0 
+        Memory:     --------    
+        Writeback:     --------    
+*******************************************************
+
+***********************Circle 4**************************
+ZF=1 SF=0 OF=0 Stat=AOK
+F :  predPC=0x14
+D : Decode stage is doing nothing.      State=BUB
+E : Execute stage is doing nothing.      State=BUB
+M: instr=irmovq  Cnd=1  valE=0x38  valA=0x0  dstE=%rax  dstM=----  State=AOK
+W: instr=irmovq   valE=0x40   valM=0x0  dstE=%rsp  dstM=----  State=AOK
+        Execute: ALU:    --------    
+        Memory:     --------    
+        Writeback: Wrote valE to register %rsp
+*******************************************************
+
+***********************Circle 5**************************
+ZF=1 SF=0 OF=0 Stat=AOK
+F :  predPC=0x14
+D : Decode stage is doing nothing.      State=BUB
+E : Execute stage is doing nothing.      State=BUB
+M: Memory stage is doing nothing.     State=BUB
+W: instr=irmovq   valE=0x38   valM=0x0  dstE=%rax  dstM=----  State=AOK
+        Execute: ALU:    --------    
+        Memory:     --------    
+        Writeback: Wrote valE to register %rax
+*******************************************************
+
+***********************Circle 6**************************
+ZF=1 SF=0 OF=0 Stat=AOK
+F :  predPC=0x16
+D : instr=pushq    rA=%rax  rB=----  valC=0x0  valP=0x16  State=AOK
+E : Execute stage is doing nothing.      State=BUB
+M: Memory stage is doing nothing.     State=BUB
+W: Write-back stage is doing nothing. State=BUB
+        Execute: ALU:    --------    
+        Memory:     --------    
+        Writeback:     --------    
+*******************************************************
+
+***********************Circle 7**************************
+ZF=1 SF=0 OF=0 Stat=AOK
+F :  predPC=0x18
+D : instr=xorq  rA=%rax  rB=%rax  valC=0x0  valP=0x18  State=AOK
+E : instr=pushq         valC=0x0   valA=0x38  valB=0x40
+      srcA=%rax  srcB=----  dstE=%rsp  dstM=----  State=AOK
+M: Memory stage is doing nothing.     State=BUB
+W: Write-back stage is doing nothing. State=BUB
+        Execute: ALU: valE = valB - 8 
+        Memory:     --------    
+        Writeback:     --------    
+*******************************************************
+
+***********************Circle 8**************************
+ZF=1 SF=0 OF=0 Stat=AOK
+F: predPC=----(instr = ret)
+D : instr=jne  rA=----  rB=----  valC=0x2c  valP=0x21  State=AOK
+E : instr=xorq       valC=0x0   valA=0x38  valB=0x38
+      srcA=%rax  srcB=%rax  dstE=%rax  dstM=----  State=AOK
+M: instr=pushq    Cnd=1  valE=0x38  valA=0x38  dstE=%rsp  dstM=----  State=AOK
+W: Write-back stage is doing nothing. State=BUB
+        Execute: ALU: valE = valA ^ valB 
+        Memory:  Wrote valA to memory D(valE). 
+        Writeback:     --------    
+*******************************************************
+
+***********************Circle 9**************************
+ZF=1 SF=0 OF=0 Stat=AOK
+F: predPC=----(instr = ret)
+D : Decode stage is doing nothing.      State=BUB
+E : instr=jne       valC=0x2c   valA=0x21  valB=0x0
+      srcA=----  srcB=----  dstE=----  dstM=----  State=AOK
+M: instr=xorq  Cnd=1  valE=0x0  valA=0x0  dstE=%rax  dstM=----  State=AOK
+W: instr=pushq     valE=0x38   valM=0x0  dstE=%rsp  dstM=----  State=AOK
+        Execute: ALU:    --------    
+        Memory:     --------    
+        Writeback: Wrote valE to register %rsp
+*******************************************************
+
+***********************Circle 10**************************
+ZF=1 SF=0 OF=0 Stat=AOK
+F :  predPC=0x21
+D : Decode stage is doing nothing.      State=BUB
+E : Execute stage is doing nothing.      State=BUB
+M: instr=jne  Cnd=0  valE=0x0  valA=0x21  dstE=----  dstM=----  State=AOK
+W: instr=xorq   valE=0x0   valM=0x0  dstE=%rax  dstM=----  State=AOK
+        Execute: ALU:    --------    
+        Memory:     --------    
+        Writeback: Wrote valE to register %rax
+*******************************************************
+
+***********************Circle 11**************************
+ZF=1 SF=0 OF=0 Stat=AOK
+F :  predPC=0x2b
+D : instr=irmovq  rA=----  rB=%rax  valC=0x1  valP=0x2b  State=AOK
+E : Execute stage is doing nothing.      State=BUB
+M: Memory stage is doing nothing.     State=BUB
+W: instr=jne   valE=0x0   valM=0x0  dstE=----  dstM=----  State=AOK
+        Execute: ALU:    --------    
+        Memory:     --------    
+        Writeback:     --------    
+*******************************************************
+
+***********************Circle 12**************************
+ZF=1 SF=0 OF=0 Stat=AOK
+F: predPC=----(instr = ret)
+D : instr=halt       rA=----  rB=----  valC=0x0  valP=0x2c  State=HLT
+E : instr=irmovq       valC=0x1   valA=0x0  valB=0x0
+      srcA=----  srcB=----  dstE=%rax  dstM=----  State=AOK
+M: Memory stage is doing nothing.     State=BUB
+W: Write-back stage is doing nothing. State=BUB
+        Execute: ALU: valE = valC + 0 
+        Memory:     --------    
+        Writeback:     --------    
+*******************************************************
+
+***********************Circle 13**************************
+ZF=1 SF=0 OF=0 Stat=AOK
+F : Fetch stage is doing nothing.          State=BUB
+D : instr=ret       rA=%rsp  rB=%rsp  valC=0x0  valP=0x2d  State=AOK
+E : instr=halt            valC=0x0   valA=0x0  valB=0x0
+      srcA=----  srcB=----  dstE=----  dstM=----  State=HLT
+M: instr=irmovq  Cnd=1  valE=0x1  valA=0x0  dstE=%rax  dstM=----  State=AOK
+W: Write-back stage is doing nothing. State=HLT
+        Execute: ALU:    --------    
+        Memory:     --------    
+        Writeback:     --------    
+*******************************************************
+
+***********************Circle 14**************************
+ZF=1 SF=0 OF=0 Stat=AOK
+F : Fetch stage is doing nothing.          State=HLT
+D : Decode stage is doing nothing.      State=HLT
+E : Execute stage is doing nothing.      State=HLT
+M: instr=halt       Cnd=1  valE=0x0  valA=0x0  dstE=----  dstM=----  State=HLT
+W: instr=irmovq   valE=0x1   valM=0x0  dstE=%rax  dstM=----  State=AOK
+        Execute: ALU:    --------    
+        Memory:     --------    
+        Writeback: Wrote valE to register %rax
+*******************************************************
+
+***********************Circle 15**************************
+ZF=1 SF=0 OF=0 Stat=AOK
+F : Fetch stage is doing nothing.          State=HLT
+D : Decode stage is doing nothing.      State=HLT
+E : Execute stage is doing nothing.      State=HLT
+M: Memory stage is doing nothing.     State=HLT
+W: instr=halt        valE=0x0   valM=0x0  dstE=----  dstM=----  State=HLT
+        Execute: ALU:    --------    
+        Memory:     --------    
+        Writeback:     --------    
+*******************************************************
+
+######## The Y86 is stopped. Stat=HLT ##########
+

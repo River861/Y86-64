@@ -1,0 +1,19 @@
+State=INS
+Condition Code:  ZF=1 SF=0 OF=0
+5 codes read.
+9 circles excuted.
+
+The quantities of every instructions executed:
+halt  : 1   nop   : 0   rrmovq: 0   irmovq: 1   rmmovq: 0   
+mrmovq: 0   OPq   : 1   jXX   : 1   call    : 0   ret       : 0   
+pushq : 0   popq     : 0   iaddq    : 0   INS    : 2   
+
+CPI: 1.8
+Runtime: 0.66 s
+Memory Size: 1000MB
+Speed Level: 5
+
+Changed Register State:
+%rax:   0x0000000000000000      0x0000000000000001
+Changed Memory State:
+None.

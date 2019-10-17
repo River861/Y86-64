@@ -1,0 +1,26 @@
+﻿生成启动时间为 2019/1/12 2:12:46。
+     1>项目“C:\Users\97519\Desktop\River's_Y86-64_with_GUI\Y86-64_VS\River's_Y86-64\River's_Y86-64\River's_Y86-64.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         E:\vs\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\..\..\River's_Y86-64_with_GUI\Y86-64_VS\River's_Y86-64\River's_Y86-64\memory_operation.cpp"
+         memory_operation.cpp
+     1>..\..\..\..\River's_Y86-64_with_GUI\Y86-64_VS\River's_Y86-64\River's_Y86-64\memory_operation.cpp(53): warning C4101: “i”: 未引用的局部变量
+       Link:
+         E:\vs\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\97519\Desktop\River's_Y86-64_with_GUI\Y86-64_VS\River's_Y86-64\Release\River's_Y86-64.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\97519\Desktop\River's_Y86-64_with_GUI\Y86-64_VS\River's_Y86-64\Release\River's_Y86-64.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\97519\Desktop\River's_Y86-64_with_GUI\Y86-64_VS\River's_Y86-64\Release\River's_Y86-64.lib" /MACHINE:X86 /SAFESEH Release\memory_operation.obj
+         Release\choose_road.obj
+         Release\five_stages.obj
+         Release\initialize.obj
+         Release\main.obj
+         Release\outline.obj
+         Release\output_format.obj
+         Release\pipe_register.obj
+         Release\read.obj
+         Release\twelve_instr.obj
+         Release\write.obj
+         正在生成代码
+         已完成代码的生成
+         River's_Y86-64.vcxproj -> C:\Users\97519\Desktop\River's_Y86-64_with_GUI\Y86-64_VS\River's_Y86-64\Release\River's_Y86-64.exe
+     1>已完成生成项目“C:\Users\97519\Desktop\River's_Y86-64_with_GUI\Y86-64_VS\River's_Y86-64\River's_Y86-64\River's_Y86-64.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.15

@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/image">
+        <file alias="author">author.png</file>
+        <file alias="help">help2.png</file>
+        <file alias="key">key2.png</file>
+        <file alias="openfile">openfile2.png</file>
+        <file alias="run">run2.png</file>
+        <file alias="runone">runone2.png</file>
+        <file alias="save">save2.png</file>
+        <file alias="me">me.png</file>
+        <file alias="submit">submit.png</file>
+        <file alias="cog">cog.png</file>
+        <file alias="gear">gear.png</file>
+        <file alias="logout">logout.png</file>
+        <file alias="screen">screen.png</file>
+        <file alias="sky3">sky3.png</file>
+        <file alias="sea3">sea3.png</file>
+        <file alias="qt">qtcode.png</file>
+        <file alias="Qt">Qt.png</file>
+    </qresource>
+</RCC>

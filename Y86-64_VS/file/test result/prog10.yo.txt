@@ -1,0 +1,19 @@
+State=ADR
+Condition Code:  ZF=1 SF=0 OF=0
+6 codes read.
+8 circles excuted.
+
+The quantities of every instructions executed:
+halt  : 0   nop   : 0   rrmovq: 0   irmovq: 1   rmmovq: 0   
+mrmovq: 0   OPq   : 2   jXX   : 0   call    : 0   ret       : 0   
+pushq : 1   popq     : 0   iaddq    : 0   INS    : 0   
+
+CPI: 1.33333
+Runtime: 0.447 s
+Memory Size: 1000MB
+Speed Level: 5
+
+Changed Register State:
+%rax:   0x0000000000000000      0x0000000000000001
+Changed Memory State:
+None.

@@ -1,0 +1,30 @@
+State=HLT
+Condition Code:  ZF=0 SF=0 OF=0
+24 codes read.
+138 circles excuted.
+
+The quantities of every instructions executed:
+halt  : 1   nop   : 0   rrmovq: 0   irmovq: 11   rmmovq: 0   
+mrmovq: 4   OPq   : 22   jXX   : 5   call    : 6   ret       : 6   
+pushq : 4   popq     : 4   iaddq    : 0   INS    : 0   
+
+CPI: 5.75
+Runtime: 16.663 s
+Memory Size: 1000MB
+Speed Level: 5
+
+Changed Register State:
+%rax:   0x0000000000000000      0x0000abcdabcdabcd
+%rsp:   0x0000000000000000      0x0000000000000200
+%rdi :   0x0000000000000000      0x0000000000000038
+%r10:   0x0000000000000000      0x0000000000000008
+Changed Memory State:
+0x1b0:  0x0000000000000000  0x0000000000000090
+0x1b8:  0x0000000000000000  0x00000b000b000b00
+0x1c0:  0x0000000000000000  0x0000000000000090
+0x1c8:  0x0000000000000000  0x000000c000c000c0
+0x1d0:  0x0000000000000000  0x0000000000000090
+0x1d8:  0x0000000000000000  0x0000000d000d000d
+0x1e0:  0x0000000000000000  0x0000000000000090
+0x1f0:  0x0000000000000000  0x0000000000000055
+0x1f8:  0x0000000000000000  0x0000000000000013
